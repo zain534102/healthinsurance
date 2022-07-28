@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="Urgency" id="hero-header-image">
+      <div class="clearfix"></div>
+      <div class="plate-specific-message Name_TCPA" style="display: none">
+        <h1 class="hidden-sm hidden-xs text-center">2 Steps Away!</h1>
+        <h3 class="visible-sm visible-xs text-center">2 Steps Away!</h3>
+      </div>
+      <div class="plate-specific-message Email_TCPA" style="display: none">
+        <h1 class="hidden-sm hidden-xs text-center">1 Step Away!</h1>
+        <h3 class="visible-sm visible-xs text-center">1 Step Away!</h3>
+      </div>
+      <div class="plate-specific-message Phone_TCPA" style="display: none">
+        <h1 class="hidden-sm hidden-xs text-center">Last Step!</h1>
+        <h3 class="visible-sm visible-xs text-center">Last Step!</h3>
+      </div>
+      <div
+        class="plate-specific-message Contact_Method_Preference"
+        style="display: none"
+      >
+        <h1 class="hidden-sm hidden-xs text-center">2 Steps Away!</h1>
+        <h3 class="visible-sm visible-xs text-center">2 Steps Away!</h3>
+      </div>
+      <div
+        class="plate-specific-message non-progress Urgency"
+        style="display: block"
+      >
+        <h1 class="hidden-sm hidden-xs text-center">
+          Find The Right Plan For You!
+        </h1>
+        <h3 class="visible-sm visible-xs text-center">
+          Find The Right Plan For&nbsp;You!
+        </h3>
+      </div>
+      <div class="default-message" style="display: none">
+        <h1 class="hidden-sm hidden-xs text-center">
+          Find The Right Plan For You!
+        </h1>
+        <h3 class="visible-sm visible-xs text-center">
+          Find The Right Plan For&nbsp;You!
+        </h3>
+      </div>
+      <div id="hero-header-progress-wrapper" style="display: block">
+        <div id="hero-header-progress">
+          <div class="align">
+            <progress
+              id="progress"
+              value="0"
+              max="100"
+              class="div progress-wrapper progress custom-margin"
+              style="border-radius: 50px"
+            ></progress>
+          </div>
+        </div>
+      </div>
+      <div id="hero-header-additional-message">
+        <div
+          class="plate-specific-message non-progress Urgency"
+          style="display: block"
+        >
+          <h5 class="hidden-sm hidden-xs text-center">
+            Answer a few questions to see your health plan options
+          </h5>
+          <h6 class="visible-sm visible-xs text-center">
+            Answer a few questions to see your health plan options
+          </h6>
+        </div>
+        <div class="plate-specific-message Name_TCPA" style="display: none">
+          <h5 class="hidden-sm hidden-xs text-center">
+            Answer 2 more questions to see your health plan options
+          </h5>
+          <h6 class="visible-sm visible-xs text-center">
+            Answer 2 more questions to see your health plan options
+          </h6>
+        </div>
+        <div
+          class="plate-specific-message Contact_Method_Preference"
+          style="display: none"
+        >
+          <h5 class="hidden-sm hidden-xs text-center">
+            Answer 2 more questions to see your health plan options
+          </h5>
+          <h6 class="visible-sm visible-xs text-center">
+            Answer 2 more questions to see your health plan options
+          </h6>
+        </div>
+        <div class="plate-specific-message Email_TCPA" style="display: none">
+          <h5 class="hidden-sm hidden-xs text-center">
+            Answer 1 more question to see your health plan options
+          </h5>
+          <h6 class="visible-sm visible-xs text-center">
+            Answer 1 more question to see your health plan options
+          </h6>
+        </div>
+        <div class="plate-specific-message Phone_TCPA" style="display: none">
+          <h5 class="hidden-sm hidden-xs text-center">
+            Answer this last question to see your health plan options
+          </h5>
+          <h6 class="visible-sm visible-xs text-center">
+            Answer this last question to see your health plan options
+          </h6>
+        </div>
+        <div class="default-additional-message" style="display: none">
+          <h5 class="hidden-sm hidden-xs text-center">
+            Answer a few questions to see your health plan options
+          </h5>
+          <h6 class="visible-sm visible-xs text-center">
+            Answer a few questions to see your health plan options
+          </h6>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="content container-fluid" style="left: 0px; right: 0px">
+      <div class="row">
+        <div
+          class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 plate-breakpoint"
+          id="step_1"
+        >
+          <div class="plate-content" id="plate-content">
+            <h3 id="plate-question">When would you like coverage?</h3>
+            <div class="row">
+              <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <button
+                  aria-describedby="plate-question"
+                  class="btn btn-lg button positive plate-submit"
+                  data-operation="update_urgency"
+                  data-value="Immediately"
+                  type="button"
+                  data-initialized="true"
+                  data-testid="step_1"
+                >
+                  <span>Immediately</span>
+                </button>
+              </div>
+              <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <button
+                  aria-describedby="plate-question"
+                  class="btn btn-lg button positive plate-submit"
+                  data-operation="update_urgency"
+                  data-value="Within 2 months"
+                  type="button"
+                  data-initialized="true"
+                  data-testid="step_1"
+                >
+                  <span>Within 2 months</span>
+                </button>
+              </div>
+              <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <button
+                  aria-describedby="plate-question"
+                  class="btn btn-lg button positive plate-submit"
+                  data-operation="update_urgency"
+                  data-value="Not sure"
+                  type="button"
+                  data-initialized="true"
+                  data-testid="step_1"
+                >
+                  <span>Not sure</span>
+                </button>
+              </div>
+              <div class="col-xs-12 hidden-xs">
+                <a
+                  class="phone text-sm text-center-xs primary-text"
+                  href="tel:18442606811"
+                  ><span>OR CALL&nbsp;</span>
+                  <div class="number bold">(844) 260-6811</div></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Step 2-->
+        <div
+          class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 plate-breakpoint"
+          id="step_2"
+          style="display: none"
+        >
+          <div class="plate-content" id="plate-content">
+            <div class="plate-question row">
+              <div
+                class="col-xs-12 col-md-6 col-md-offset-4"
+                style="text-align: left"
+              >
+                What benefits are most important to you?
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-md-6 col-md-offset-4">
+                <div class="radio-group">
+                  <input
+                    aria-label="Emergency Care/Hospitalization"
+                    class="big fa fa-check"
+                    data-operation="update_health_coverage_emergency"
+                    id="hinet-emergency"
+                    tabindex="0"
+                    type="checkbox"
+                    value=""
+                    data-testid="hinet-emergency"
+                  /><label for="hinet-emergency" style="font-weight: normal"
+                    >Emergency Care/Hospitalization</label
+                  >
+                </div>
+                <div class="radio-group">
+                  <input
+                    aria-label="Preventative Care"
+                    class="big fa fa-check"
+                    data-operation="update_health_coverage_preventative_care"
+                    id="hinet-preventative_care"
+                    tabindex="0"
+                    type="checkbox"
+                    data-testid="hinet-preventative_care"
+                  /><label
+                    for="hinet-preventative_care"
+                    style="font-weight: normal"
+                    >Preventative Care</label
+                  >
+                </div>
+                <div class="radio-group">
+                  <input
+                    aria-label="Dental"
+                    class="big fa fa-check"
+                    data-operation="update_health_coverage_dental"
+                    id="hinet-dental"
+                    tabindex="0"
+                    type="checkbox"
+                    data-testid="hinet-dental"
+                  /><label for="hinet-dental" style="font-weight: normal"
+                    >Dental</label
+                  >
+                </div>
+                <div class="radio-group">
+                  <input
+                    aria-label="Vision"
+                    class="big fa fa-check"
+                    data-operation="update_health_coverage_vision"
+                    id="hinet-vision"
+                    tabindex="0"
+                    type="checkbox"
+                    data-testid="hinet-vision"
+                  /><label for="hinet-vision" style="font-weight: normal"
+                    >Vision</label
+                  >
+                </div>
+                <div class="radio-group">
+                  <input
+                    aria-label="Telehealth"
+                    class="big fa fa-check"
+                    data-operation="update_health_coverage_telemedicine"
+                    id="hinet-telemedicine"
+                    tabindex="0"
+                    type="checkbox"
+                    data-testid="hinet-telemedicine"
+                  /><label for="hinet-telemedicine" style="font-weight: normal"
+                    >Telehealth</label
+                  >
+                </div>
+                <div class="radio-group">
+                  <input
+                    aria-label="Coverage for pre-existing conditions"
+                    class="big fa fa-check"
+                    data-operation="update_health_coverage_for_conditions"
+                    id="hinet-for_conditions"
+                    tabindex="0"
+                    type="checkbox"
+                    data-testid="hinet-for_conditions"
+                  /><label
+                    for="hinet-for_conditions"
+                    style="font-weight: normal"
+                    >Coverage for pre-existing conditions</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Step 3-->
+        <div
+          class="content container-fluid"
+          style="left: 0px; right: 0px; display: none"
+          id="step_3"
+        >
+          <div class="row">
+            <div
+              class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 plate-breakpoint"
+            >
+              <div class="plate-content" id="plate-content">
+                <h3 id="plate-question">
+                  Are you currently enrolled in Medicare Parts A or B?
+                </h3>
+                <div class="row">
+                  <div class="col-xs-12 col-md-6 col-md-offset-3">
+                    <button
+                      aria-describedby="plate-question"
+                      class="btn button positive btn-lg plate-submit"
+                      data-operation="update_enrolled_in_medicare_ab"
+                      data-value="yes"
+                      type="button"
+                      data-initialized="true"
+                      data-testid="step_3"
+                    >
+                      Yes
+                    </button>
+                  </div>
+                  <div class="col-xs-12 col-md-6 col-md-offset-3">
+                    <button
+                      aria-describedby="plate-question"
+                      class="btn button positive btn-lg plate-submit"
+                      data-operation="update_enrolled_in_medicare_ab"
+                      data-value="no"
+                      type="button"
+                      data-initialized="true"
+                      data-testid="step_3"
+                    >
+                      No
+                    </button>
+                  </div>
+                  <div class="col-xs-12 col-md-6 col-md-offset-3">
+                    <button
+                      aria-describedby="plate-question"
+                      class="btn button positive btn-lg plate-submit"
+                      data-operation="update_enrolled_in_medicare_ab"
+                      data-value="unsure"
+                      type="button"
+                      data-initialized="true"
+                      data-testid="step_3"
+                    >
+                      Unsure
+                    </button>
+                  </div>
+                  <div class="col-xs-12 hidden-xs">
+                    <a
+                      class="phone text-sm text-center-xs primary-text"
+                      href="tel:18442606811"
+                      ><span>OR CALL&nbsp;</span>
+                      <div class="number bold">(844) 260-6811</div></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Step 4-->
+        <div
+          class="content container-fluid"
+          style="left: 0px; right: 0px; display: none"
+          id="step_4"
+        >
+          <div class="row">
+            <div
+              class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 plate-breakpoint"
+            >
+              <div class="plate-content" id="plate-content">
+                <div class="plate-question" id="plate-question">
+                  What is your gender?
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-md-6 col-md-offset-3">
+                    <button
+                      aria-describedby="plate-question"
+                      class="btn button positive btn-lg plate-submit"
+                      data-operation="update_gender"
+                      data-testid="step_4"
+                      data-value="F"
+                      type="button"
+                      data-initialized="true"
+                    >
+                      Female
+                    </button>
+                  </div>
+                  <div class="col-xs-12 col-md-6 col-md-offset-3">
+                    <button
+                      aria-describedby="plate-question"
+                      class="btn button positive btn-lg plate-submit"
+                      data-operation="update_gender"
+                      data-testid="step_4"
+                      data-value="M"
+                      type="button"
+                      data-initialized="true"
+                    >
+                      Male
+                    </button>
+                  </div>
+                  <div class="col-xs-12 hidden-xs">
+                    <a
+                      class="phone text-sm text-center-xs primary-text"
+                      href="tel:18442606811"
+                      ><span>OR CALL&nbsp;</span>
+                      <div class="number bold">(844) 260-6811</div></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Step 5-->
+        <div class="content container-fluid" style="left: 0px; right: 0px;display: none;" id="step_5">
+          <div class="row">
+            <div
+              class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 plate-breakpoint"
+            >
+              <div class="plate-content" id="plate-content">
+                <div class="assur-plate-birthdate_mixed_inputs">
+                  <div class="plate-question">What is your date of birth?</div>
+                  <span
+                    class="trust-footnote space-bottom-md"
+                    data-content="<div style='text-align:center;'>We need to know your age in order to find your best plan options. <i class='fa fa-lock'></i></div>"
+                    data-html="true"
+                    data-placement="bottom"
+                    data-toggle="popover"
+                    data-trigger="hover"
+                    style=""
+                    tabindex="-1"
+                    data-original-title=""
+                    title=""
+                    >Why we need your birthdate&nbsp;<i
+                      class="fa fa-info-circle"
+                    ></i
+                  ></span>
+                  <div class="row">
+                    <div
+                      class="col-xs-4 col-md-2 col-md-offset-3"
+                      style="padding-right: 0"
+                    >
+                      <div class="form-group">
+                        <input
+                          aria-label="Month"
+                          aria-required="true"
+                          autocomplete="bday-month"
+                          class="form-control new-mask validate invalid"
+                          data-mask-pattern="mm"
+                          data-mask-pattern-android="09"
+                          data-mask-placeholder=""
+                          data-operation="update_birth_month"
+                          data-required="Please provide your month of birth"
+                          data-validate="validateMonth"
+                          data-validatehandler="onblurMonthEventHandler"
+                          id="hinet-birth_month"
+                          maxlength="2"
+                          placeholder="MM"
+                          type="tel"
+                          value=""
+                          data-testid="MM"
+                        /><span></span>
+                      </div>
+                    </div>
+                    <div class="col-xs-4 col-md-2" style="padding-right: 0">
+                      <div class="form-group">
+                        <label class="sr-only" for="hinet-birth_day">Day</label
+                        ><input
+                          aria-label="Day"
+                          aria-labelledby=""
+                          aria-required="true"
+                          autocomplete="bday-day"
+                          class="form-control new-mask validate"
+                          data-mask-pattern="dd"
+                          data-mask-pattern-android="09"
+                          data-mask-placeholder=""
+                          data-operation="update_birth_day"
+                          data-required="Please provide your day of birth"
+                          data-validate="validateDay"
+                          data-validatehandler="onblurDayEventHandler"
+                          id="hinet-birth_day"
+                          maxlength="2"
+                          placeholder="DD"
+                          type="tel"
+                          value=""
+                          data-testid="DD"
+                        /><span></span>
+                      </div>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                      <div class="form-group">
+                        <label class="sr-only" for="hinet-birth_year"
+                          >Year</label
+                        ><input
+                          aria-label="Year"
+                          aria-labelledby=""
+                          aria-required="true"
+                          autocomplete="bday-year"
+                          class="form-control mask validate"
+                          data-mask-pattern="0000"
+                          data-operation="update_birth_year"
+                          data-required="Please provide your year of birth"
+                          data-validate="validateYear"
+                          data-validatehandler="onblurYearEventHandler"
+                          id="hinet-birth_year"
+                          maxlength="4"
+                          placeholder="YYYY"
+                          type="tel"
+                          value=""
+                          data-testid="YYYY"
+                        /><span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12 col-md-6 col-md-offset-3">
+                      <button
+                        class="btn button positive btn-lg plate-submit"
+                        data-operation="hinet-birth_month,hinet-birth_day,hinet-birth_year"
+                        data-reference="true"
+                        type="button"
+                        data-initialized="true"
+                        data-testid="Continue"
+                      >
+                        <span>Continue</span>
+                      </button>
+                    </div>
+                    <div class="col-xs-12 hidden-xs">
+                      <a
+                        class="phone text-sm text-center-xs primary-text"
+                        href="tel:18442606811"
+                        ><span>OR CALL&nbsp;</span>
+                        <div class="number bold">(844) 260-6811</div></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <style type="text/css">
+                  .assur-plate-birthdate_mixed_inputs input {
+                    padding: 12px 16px !important;
+                  }
+                  @media (min-width: 768px) {
+                    .assur-plate-birthdate_mixed_inputs input {
+                      padding: 14px 16px !important;
+                    }
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Continue Button-->
+        <div class="row">
+          <div
+            class="col-xs-12 col-md-4 col-md-offset-4"
+            id="contiue-button-section"
+            style="display: none"
+          >
+            <button
+              class="btn btn-lg button positive plate-submit"
+              data-operation="hinet-emergency,hinet-preventative_care,hinet-dental,hinet-vision,hinet-telemedicine,hinet-for_conditions,hinet-lower_premium,hinet-lower_expenses,hinet-other"
+              data-reference="true"
+              style="margin-top: 16px"
+              tabindex="0"
+              type="button"
+              data-initialized="true"
+              id="continue"
+            >
+              <span>Continue</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
